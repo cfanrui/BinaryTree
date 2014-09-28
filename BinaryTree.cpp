@@ -1,3 +1,4 @@
+
 #include "BinaryTree.h"
 #include <stack>
 #include <queue>
@@ -43,7 +44,7 @@ BinaryTree::~BinaryTree()
 void BinaryTree::PreOrder(std::string& output) const
 {
 	output.clear();
-	TreeNode* p = m_pTree; //
+	TreeNode* p = m_pTree; //p指向当前正访问的节点
 	std::stack<TreeNode*> s;
 	while (p || !s.empty())
 	{
