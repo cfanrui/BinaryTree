@@ -3,6 +3,7 @@
 #define _BINARYTREE_H_
 
 #include <string>
+#include <vector>
 
 //structure of a tree node
 class TreeNode
@@ -35,6 +36,7 @@ public:
 	void LevelOrder(std::string&) const;
 	//traverse one level by one level
 	//and node sequence reverses at each odd level
+	//level number from 1
 	void SLevelOrder(std::string&) const;
 	//extract nodes of a certain level
 	//level number starts with 1
@@ -45,9 +47,9 @@ public:
 	//width is defined as:
 	//the node number of a level that has the most node number
 	size_t Width() const;
-	//return one of the longest paths from root to a leaf node
+	//return all of the longest paths from root to a leaf node
 	//and save the node values of the path
-	size_t LongestPath(std::string&) const;
+	size_t LongestPath(std::vector<std::string>&) const;
 	size_t NumberOfNodes() const;
 private:
 	//root pointer
